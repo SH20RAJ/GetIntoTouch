@@ -76,24 +76,50 @@
             </button>
             <hr>
             <h1 id="test">Test</h1>
-            <form id="messageForm" method="post" enctype="multipart/form-data" action="api.php">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-            </div>
+            <form id="messageForm" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
 
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-            </div>
+    <div class="form-group">
+      <label for="message">Message:</label>
+      <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+    </div>
 
-            <div class="form-group">
-                <label for="photo">Upload Photo:</label>
-                <input type="file" class="form-control-file" id="photo" name="photo">
-            </div>
+    <div class="form-group">
+      <label for="photo">Upload Photo/File:</label>
+      <input type="file" class="form-control-file" id="photo" name="photo">
+    </div>
 
-            <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
+    <button type="submit" class="btn btn-primary">Send Message</button>
+  </form>
+
+  <script>
+    document.getElementById("messageForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      const form = event.target;
+      const formData = new FormData(form);
+
+      fetch("https://getintotouch.sh20raj.com/api.php?id=", {
+        method: "POST",
+        body: formData,
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Handle the response data as needed
+        console.log(data);
+        // Optionally, display a success message to the user
+        alert("Message sent successfully!");
+      })
+      .catch(error => {
+        console.error("Error:", error);
+        // Optionally, display an error message to the user
+        alert("An error occurred while sending the message.");
+      });
+    });
+  </script>
             
     </div>
 
