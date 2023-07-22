@@ -3,7 +3,7 @@
 <head>
     <title>GetIntoTouch - Create Custom Forms</title>
     <!-- Add Bootstrap CSS link here -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
 </head>
 <body>
     <!-- Header -->
