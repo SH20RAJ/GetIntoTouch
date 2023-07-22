@@ -16,6 +16,9 @@
                     <a class="nav-link" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://telegram.me/getintotouchbot">Bot</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#create">Create API</a>
                 </li>
                 <li class="nav-item">
