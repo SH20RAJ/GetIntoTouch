@@ -16,6 +16,15 @@
                     <a class="nav-link" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="#create">Create API</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Usage</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">Test</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
@@ -27,7 +36,7 @@
 
     <!-- Main Content -->
     <div class="container mt-4">
-        <h1>Create Custom Forms</h1>
+        <h1>Create Custom Forms & Get API URL</h1>
         <p>Send the Form Details Submission by users on your Telegram App.</p>
         <!-- Add your custom forms and functionality here -->
     
@@ -52,7 +61,7 @@
                 </script>
             </div>
             <hr>
-            <h1>Usage</h1>
+            <h1 id="usage">Usage</h1>
             <p>Paste your Telegram User ID here. Get your User ID from 
                 <a href="https://telegram.me/userinfobot">https://telegram.me/userinfobot</a> 
                 and paste it below to obtain your API URL. <br>
@@ -66,7 +75,7 @@
             Usage Example Code
             </button>
             <hr>
-            <h1>Test</h1>
+            <h1 id="test">Test</h1>
             <form id="messageForm" method="post" enctype="multipart/form-data" action="api.php">
             <div class="form-group">
                 <label for="name">Name:</label>
