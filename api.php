@@ -1,4 +1,18 @@
 <?php
+header('Content-Type: application/json');
+// Allow requests from any origin
+header('Access-Control-Allow-Origin: *');
+// Allow the following HTTP methods for CORS requests
+header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
+// Allow the following headers for CORS requests
+header('Access-Control-Allow-Headers: Content-Type');
+// Allow cookies to be sent in CORS requests
+header('Access-Control-Allow-Credentials: true');
+// Set the cache control header to prevent caching of CORS responses
+header('Cache-Control: no-cache, no-store, must-revalidate');
+header('Pragma: no-cache');
+header('Expires: 0');
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Process the form data
     $formData = $_POST;
