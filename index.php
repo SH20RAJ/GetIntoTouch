@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Contact Us - GetIntoTouch</title>
+    <title>GetIntoTouch - Create Custom Forms</title>
     <!-- Add Bootstrap CSS link here -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">GetIntoTouch</a>
+            <!-- Add your navigation links here -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <h1>Create Custom Forms</h1>
+        <p>Send the Form Details Submission by users on your Telegram App.</p>
+        <!-- Add your custom forms and functionality here -->
+    </div>
+
+
     <div class="container mt-5">
         <h1>Contact Us</h1>
         <form id="contactForm" method="post" action="api.php">
@@ -27,6 +54,10 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2023 GetIntoTouch. All rights reserved.</p>
+    </footer>
 
     <!-- Add Bootstrap JS and jQuery link here -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
