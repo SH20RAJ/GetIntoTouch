@@ -1,7 +1,4 @@
 <?php
-header('Content-Type: application/json');
-// Allow requests from any origin
-header('Access-Control-Allow-Origin: *');
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Process the form data
@@ -64,6 +61,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     $result = curl_exec($ch);
     curl_close($ch);
+
+    header('Content-Type: application/json');
+    // Allow requests from any origin
+    header('Access-Control-Allow-Origin: *');
+
 
     // Handle any response from the Telegram API (optional)
     if ($result === false) {
