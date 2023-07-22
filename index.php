@@ -119,6 +119,7 @@
         </script>
                     
             </div>
+            <div class="container mt-5">
             <h1 id="#usage">Usage</h1>
             <hr>
             <p>Paste your Telegram User ID here. Get your User ID from 
@@ -130,6 +131,7 @@
                 to receive all data as a Telegram notification/messages.
                 from <strong>@getintotouchbot</strong> - <a href="https://telegram.me/getintotouchbot">https://telegram.me/getintotouchbot</a>.
             </p>
+        </div>
     <div class="container mt-5">
         <h1>Contact Us</h1>
         <form id="contactForm" method="post" action="https://getintotouch.sh20raj.com/api.php">
