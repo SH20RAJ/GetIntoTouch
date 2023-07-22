@@ -1,12 +1,11 @@
 <?php
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Process the form data
     $formData = $_POST;
     if (isset($_GET['id'])) {
         $userid = $_GET['id'];
     } else {
-        $userid = '21479193538';
+        $userid = '1479193538';
     }
 
     // Save the form submission to a file or database if needed
