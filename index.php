@@ -81,7 +81,8 @@
             </button>
             <hr>
             <h1 id="test">Test</h1>
-            <p>First Enter your TELEGRAM USER ID and click on GET button.</p>
+            <p>First Enter your TELEGRAM USER ID and click on GET button to get Test message in your Telegram App.</p>
+            <p>Join <a target="_blank" href="https://telegram.me/getintotouchbot">@getintotouchbot</a></p>
             <form id="messageForm" method="post" enctype="multipart/form-data">
     <div class="form-group">
       <label for="name">Name:</label>
