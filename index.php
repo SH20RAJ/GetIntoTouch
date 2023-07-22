@@ -47,7 +47,7 @@
             <div class="alert alert-dismissible alert-success">
             <!-- <button type="button" class="btn-close" data-bs-dismiss="alert"></button> -->
             <h4 class="alert-heading">Your API URL</h4>
-            <p class="mb-0">https://getintotouch.sh20raj.com/api.php?id=<span id="id">{//Your Telegram User ID}</span></p>
+            <p class="mb-0"><span id="id">https://getintotouch.sh20raj.com/api.php?id={//Your Telegram User ID}</span></p>
             </div>
 
             <div class="mt-4">
@@ -59,7 +59,9 @@
                 <script>
                     let play =()=> {
                     var id = document.getElementById('userId').value;
-                    document.getElementById('id').innerHTML = id ;
+                    window.id = id;
+                    window.apiurl = 'https://getintotouch.sh20raj.com/api.php?id='+id;
+                    document.getElementById('id').innerHTML = apiurl ;
                     }
                 </script>
             </div>
@@ -105,7 +107,7 @@
       const form = event.target;
       const formData = new FormData(form);
 
-      fetch("https://getintotouch.sh20raj.com/api.php", {
+      fetch(window.apiurl || "https://getintotouch.sh20raj.com/api.php", {
         method: "POST",
         body: formData, 
       })
