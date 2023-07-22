@@ -40,15 +40,23 @@
                 to receive all data as a Telegram notification/message 
                 from <strong>@getintotouchbot</strong> - <a href="https://telegram.me/getintotouchbot">https://telegram.me/getintotouchbot</a>.
             </h3>
+            <div class="alert alert-dismissible alert-warning">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <h4 class="alert-heading">Warning!</h4>
+            <p class="mb-0">Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
+            </div>
 
             <div class="mt-4">
-                <form id="telegramForm" method="post" action="https://getintotouch.sh20raj.com/api.php">
+                <form id="getidform_2">
                     <div class="form-group">
                         <label for="userId">Telegram User ID:</label>
                         <input type="text" class="form-control" id="userId" name="id" placeholder="Enter your Telegram User ID" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Get</button>
+                    <button onclick="play()" class="btn btn-primary">Get</button>
                 </form>
+                <script>
+                    let play =()=> document.getElementById('userId').value
+                </script>
             </div>
     </div>
 
