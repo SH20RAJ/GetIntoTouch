@@ -62,11 +62,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $result = curl_exec($ch);
     curl_close($ch);
 
-    header('Content-Type: application/json');
-    // Allow requests from any origin
-    header('Access-Control-Allow-Origin: *');
-
-
     // Handle any response from the Telegram API (optional)
     if ($result === false) {
         echo '{"status":"failed"}';
