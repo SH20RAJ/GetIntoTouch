@@ -104,7 +104,7 @@
 
       fetch("https://getintotouch.sh20raj.com/api.php?id=", {
         method: "POST",
-        body: formData,
+        body: formData, 
       })
       .then(response => response.json())
       .then(data => {
