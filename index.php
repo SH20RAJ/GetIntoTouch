@@ -47,13 +47,11 @@
             </div>
 
             <div class="mt-4">
-                <form id="getidform_2">
                     <div class="form-group">
                         <label for="userId">Telegram User ID:</label>
                         <input type="text" class="form-control" id="userId" name="id" placeholder="Enter your Telegram User ID" required>
                     </div>
                     <button onclick="play()" class="btn btn-primary">Get</button>
-                </form>
                 <script>
                     let play =()=> document.getElementById('id').innerHTML =  document.getElementById('userId').value
                 </script>
