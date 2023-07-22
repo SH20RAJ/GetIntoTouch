@@ -32,6 +32,20 @@
         <!-- Add your custom forms and functionality here -->
     </div>
 
+    <p>Paste your Telegram User ID here. Get your User ID from https://telegram.me/userinfobot and paste it below to obtain your API URL. Set the API URL in the action attribute of your form and the method as POST or create an AJAX/Fetch request on the API URL https://getintotouch.sh20raj.com/api.php?id={//Your User ID} to receive all data as a Telegram notification/message from @getintotouchbot - https://telegram.me/@getintotouchbot.</p>
+
+    <div class="container mt-4">
+        <form id="telegramForm" method="post" action="https://getintotouch.sh20raj.com/api.php">
+            <div class="form-group">
+                <label for="userId">Telegram User ID:</label>
+                <input type="text" class="form-control" id="userId" name="id" placeholder="Enter your Telegram User ID" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Get</button>
+        </form>
+    </div>
+
+        
+
 
     <div class="container mt-5">
         <h1>Contact Us</h1>

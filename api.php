@@ -2,8 +2,11 @@
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Process the form data
     $formData = $_POST;
-  $userid = '1479193538';
-
+    if(isset($_GET['id'])){
+          $userid = $_GET['id'];
+    } else {
+        $userid = '1479193538';
+    }
     // Save the form submission to a file or database if needed
 
     // Replace 'YOUR_TELEGRAM_BOT_TOKEN' with your actual Telegram bot token
