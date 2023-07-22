@@ -8,7 +8,7 @@
 <body>
     <div class="container mt-5">
         <h1>Contact Us</h1>
-        <form id="contactForm" method="post">
+        <form id="contactForm" method="post" action="api.php">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" class="form-control" id="name" name="name" required>
