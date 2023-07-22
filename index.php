@@ -131,6 +131,61 @@
                 to receive all data as a Telegram notification/messages.
                 from <strong>@getintotouchbot</strong> - <a href="https://telegram.me/getintotouchbot">https://telegram.me/getintotouchbot</a>.
             </p>
+            <h3>Sample Code for Test</h3>
+            <pre>
+                <code class="language-html">
+                &#x3C;form id=&#x22;messageForm&#x22; method=&#x22;post&#x22; enctype=&#x22;multipart/form-data&#x22;&#x3E;
+            &#x3C;div class=&#x22;form-group&#x22;&#x3E;
+            &#x3C;label for=&#x22;name&#x22;&#x3E;Name:&#x3C;/label&#x3E;
+            &#x3C;input type=&#x22;text&#x22; class=&#x22;form-control&#x22; id=&#x22;name&#x22; name=&#x22;name&#x22; required&#x3E;
+            &#x3C;/div&#x3E;
+
+            &#x3C;div class=&#x22;form-group&#x22;&#x3E;
+            &#x3C;label for=&#x22;message&#x22;&#x3E;Message:&#x3C;/label&#x3E;
+            &#x3C;textarea class=&#x22;form-control&#x22; id=&#x22;message&#x22; name=&#x22;message&#x22; rows=&#x22;5&#x22; required&#x3E;&#x3C;/textarea&#x3E;
+            &#x3C;/div&#x3E;
+
+            &#x3C;div class=&#x22;form-group&#x22;&#x3E;
+            &#x3C;label for=&#x22;photo&#x22;&#x3E;Upload Photo/File:&#x3C;/label&#x3E;
+            &#x3C;input type=&#x22;file&#x22; class=&#x22;form-control-file&#x22; id=&#x22;photo&#x22; name=&#x22;photo&#x22;&#x3E;
+            &#x3C;/div&#x3E;
+
+            &#x3C;button type=&#x22;submit&#x22; class=&#x22;btn btn-primary&#x22;&#x3E;Send Message&#x3C;/button&#x3E;
+        &#x3C;/form&#x3E;
+
+        &#x3C;script&#x3E;
+            document.getElementById(&#x22;messageForm&#x22;).addEventListener(&#x22;submit&#x22;, function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            fetch(window.apiurl || &#x22;https://getintotouch.sh20raj.com/api.php&#x22;, {
+                method: &#x22;POST&#x22;,
+                body: formData, 
+            })
+            .then(response =&#x3E; response.json())
+            .then(data =&#x3E; {
+                // Handle the response data as needed
+                console.log(data);
+                if(data.status == &#x27;success&#x27;){
+                // Optionally, display a success message to the user
+                    alert(&#x22;Message sent successfully!&#x22;);
+                } else if(data.status == &#x27;failed&#x27;){
+                    alert(&#x22;Message sent Failed!&#x22;);
+                }
+            })
+            .catch(error =&#x3E; {
+                console.error(&#x22;Error:&#x22;, error);
+                // Optionally, display an error message to the user
+                alert(&#x22;An error occurred while sending the message.&#x22;);
+            });
+            });
+        &#x3C;/script&#x3E;
+                    
+
+                </code>
+            </pre>
         </div>
     <div class="container m">
         <h1>Contact Us</h1>
