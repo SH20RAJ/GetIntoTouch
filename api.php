@@ -27,7 +27,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $file = $_FILES['file'];
         $fileContent = file_get_contents($file['tmp_name']);
         // You can handle the file content or attach it to the Telegram message as needed.
-        // Example: $telegramMessage .= "Attachment: " . $file['name'] . "\n";
+        // Example: 
+        $telegramMessage .= "Attachment: " . $file['name'] . "\n";
     }
 
     // Send the message to Telegram using the bot API
