@@ -65,7 +65,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($result === false) {
         echo '{"status":"failed"}';
     } else {
-        echo '{"status":"failed"}';
+        echo '{"status":"success"}';
     }
 }
 ?>
