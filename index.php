@@ -31,15 +31,7 @@
         <p>Send the Form Details Submission by users on your Telegram App.</p>
         <!-- Add your custom forms and functionality here -->
     
-            <p>Paste your Telegram User ID here. Get your User ID from 
-                <a href="https://telegram.me/userinfobot">https://telegram.me/userinfobot</a> 
-                and paste it below to obtain your API URL. 
-                Set the API URL in the action attribute of your form and the 
-                method as POST or create an AJAX/Fetch request on the API URL 
-                https://getintotouch.sh20raj.com/api.php?id={//Your User ID} 
-                to receive all data as a Telegram notification/message 
-                from <strong>@getintotouchbot</strong> - <a href="https://telegram.me/getintotouchbot">https://telegram.me/getintotouchbot</a>.
-            </p>
+            
             <div class="alert alert-dismissible alert-success">
             <!-- <button type="button" class="btn-close" data-bs-dismiss="alert"></button> -->
             <h4 class="alert-heading">Your API URL</h4>
@@ -56,6 +48,15 @@
                     let play =()=> document.getElementById('id').innerHTML =  document.getElementById('userId').value
                 </script>
             </div>
+            <p>Paste your Telegram User ID here. Get your User ID from 
+                <a href="https://telegram.me/userinfobot">https://telegram.me/userinfobot</a> 
+                and paste it below to obtain your API URL. /n
+                Set the API URL in the action attribute of your form and the 
+                method as POST or create an AJAX/Fetch request on the API URL 
+                https://getintotouch.sh20raj.com/api.php?id={//Your User ID} 
+                to receive all data as a Telegram notification/message 
+                from <strong>@getintotouchbot</strong> - <a href="https://telegram.me/getintotouchbot">https://telegram.me/getintotouchbot</a>.
+            </p>
     </div>
 
         
