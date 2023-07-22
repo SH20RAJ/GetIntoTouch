@@ -41,9 +41,9 @@
                 from <strong>@getintotouchbot</strong> - <a href="https://telegram.me/getintotouchbot">https://telegram.me/getintotouchbot</a>.
             </p>
             <div class="alert alert-dismissible alert-success">
-            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <!-- <button type="button" class="btn-close" data-bs-dismiss="alert"></button> -->
             <h4 class="alert-heading">Your API URL</h4>
-            <p class="mb-0">Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, <a href="#" class="alert-link">vel scelerisque nisl consectetur et</a>.</p>
+            <p class="mb-0">https://getintotouch.sh20raj.com/api.php?id=<span id="id">{//Your User ID}</span></p>
             </div>
 
             <div class="mt-4">
@@ -55,7 +55,7 @@
                     <button onclick="play()" class="btn btn-primary">Get</button>
                 </form>
                 <script>
-                    let play =()=> document.getElementById('userId').value
+                    let play =()=> document.getElementById('id').innerHTML =  document.getElementById('userId').value
                 </script>
             </div>
     </div>
