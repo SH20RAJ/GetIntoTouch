@@ -66,20 +66,6 @@
                 </script>
             </div>
             <hr>
-            <h1 id="usage">Usage</h1>
-            <p>Paste your Telegram User ID here. Get your User ID from 
-                <a href="https://telegram.me/userinfobot">https://telegram.me/userinfobot</a> 
-                and paste it below to obtain your API URL. <br>
-                Set the API URL in the action attribute of your form and the 
-                method as POST or create an AJAX/Fetch request on the API URL 
-                https://getintotouch.sh20raj.com/api.php?id={//Your User ID} 
-                to receive all data as a Telegram notification/messages.
-                from <strong>@getintotouchbot</strong> - <a href="https://telegram.me/getintotouchbot">https://telegram.me/getintotouchbot</a>.
-            </p>
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-            Usage Example Code
-            </button>
-            <hr>
             <h1 id="test">Test</h1>
             <p>First Enter your TELEGRAM USER ID and click on GET button to get Test message in your Telegram App.</p>
             <br><p>Join <a color="blue" target="_blank" href="https://telegram.me/getintotouchbot">@getintotouchbot</a></p>
@@ -117,8 +103,12 @@
       .then(data => {
         // Handle the response data as needed
         console.log(data);
+        if(data.status == 'success'){
         // Optionally, display a success message to the user
-        alert("Message sent successfully!");
+            alert("Message sent successfully!");
+        } else if(data.status == 'failed'){
+            alert("Message sent Failed!");
+        }
       })
       .catch(error => {
         console.error("Error:", error);
@@ -129,6 +119,8 @@
   </script>
             
     </div>
+
+
 
         
 
