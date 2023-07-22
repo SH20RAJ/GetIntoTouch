@@ -102,7 +102,7 @@
       const form = event.target;
       const formData = new FormData(form);
 
-      fetch("https://getintotouch.sh20raj.com/api.php?id=", {
+      fetch("https://getintotouch.sh20raj.com/api.php", {
         method: "POST",
         body: formData, 
       })
