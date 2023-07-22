@@ -81,6 +81,7 @@
             </button>
             <hr>
             <h1 id="test">Test</h1>
+            <p>First Enter your TELEGRAM USER ID and click on GET button.</p>
             <form id="messageForm" method="post" enctype="multipart/form-data">
     <div class="form-group">
       <label for="name">Name:</label>
