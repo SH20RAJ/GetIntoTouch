@@ -63,9 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Handle any response from the Telegram API (optional)
     if ($result === false) {
-        echo "Error sending message to Telegram.";
+        echo "{"status":"failed"}";
     } else {
-        echo "Form submitted successfully! We will get in touch with you soon.";
+        echo "{"status":"success"}";
     }
 }
 ?>
