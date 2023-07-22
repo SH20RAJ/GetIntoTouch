@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: application/json');
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Process the form data
     $formData = $_POST;
