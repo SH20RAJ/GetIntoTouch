@@ -119,7 +119,7 @@
         </script>
                     
             </div>
-            <div class="container mt-5">
+            <div class="container m">
             <h1 id="#usage">Usage</h1>
             <hr>
             <p>Paste your Telegram User ID here. Get your User ID from 
@@ -132,7 +132,7 @@
                 from <strong>@getintotouchbot</strong> - <a href="https://telegram.me/getintotouchbot">https://telegram.me/getintotouchbot</a>.
             </p>
         </div>
-    <div class="container mt-5">
+    <div class="container m">
         <h1>Contact Us</h1>
         <form id="contactForm" method="post" action="https://getintotouch.sh20raj.com/api.php">
             <div class="form-group">
@@ -154,7 +154,7 @@
         </form>
     </div>
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-5">
+    <footer class="bg-dark text-white text-center py-3 m">
         <p>&copy; 2023 GetIntoTouch. All rights reserved.</p>
     </footer>
 
