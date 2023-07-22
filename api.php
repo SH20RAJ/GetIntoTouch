@@ -8,8 +8,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $userid = '1479193538';
     }
 
-    // Save the form submission to a file or database if needed
-
     // Replace 'YOUR_TELEGRAM_BOT_TOKEN' with your actual Telegram bot token
     $telegramBotToken = '6683877755:AAEZrpG-0ucnpqZyKp-4utwj8COcVpGusa4';
     $telegramChatId = $userid; // Replace with the admin's chat ID
@@ -22,14 +20,34 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $telegramMessage .= "$key: $value\n";
     }
 
-    // Handle file uploads (if any)
-    if (isset($_FILES['file'])) {
-        $file = $_FILES['file'];
-        $fileContent = file_get_contents($file['tmp_name']);
+    // Handle file upload (if any)
+    if (isset($_FILES['photo'])) {
+        $file = $_FILES['photo'];
+        $photoPath = $file['tmp_name'];
+        $photoName = $file['name'];
+        $photoSize = $file['size'];
+
         // You can handle the file content or attach it to the Telegram message as needed.
-        // Example: 
-        $telegramMessage .= "You Also have a file attached\n";
-        $telegramMessage .= "Attachment: " . $file['name'] . "\n";
+        // In this example, we will use the Telegram sendPhoto method to send the photo as an attachment.
+
+        // Prepare the photo for sending to Telegram using cURL
+        $telegramApiUrl = "https://api.telegram.org/bot$telegramBotToken/sendPhoto";
+        $data = array(
+            'chat_id' => $telegramChatId,
+            'photo' => new CURLFile($photoPath, mime_content_type($photoPath), $photoName),
+            'caption' => "Photo from the contact form submission: $photoName",
+        );
+
+        // Use cURL to send the photo to Telegram
+        $ch = curl_init($telegramApiUrl);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $result = curl_exec($ch);
+        curl_close($ch);
+
+        // Handle any response from the Telegram API (optional)
+        // In this example, we won't handle the response, but you can add error checking if needed.
     }
 
     // Send the message to Telegram using the bot API
