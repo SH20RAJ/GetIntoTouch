@@ -2,8 +2,11 @@
 <html>
 <head>
     <title>GetIntoTouch - Create Custom Forms</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Add Bootstrap CSS link here -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.css">       
 </head>
 <body>
     <!-- Header -->
@@ -234,6 +237,7 @@
     });
   }
 </script>
+<script src="https://cdn.jsdelivr.net/gh/CDNSFree2/PrismJS@latest/prism.min.js"></script>       
 
 </body>
 </html>
