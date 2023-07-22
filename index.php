@@ -43,7 +43,7 @@
             <div class="alert alert-dismissible alert-success">
             <!-- <button type="button" class="btn-close" data-bs-dismiss="alert"></button> -->
             <h4 class="alert-heading">Your API URL</h4>
-            <p class="mb-0">https://getintotouch.sh20raj.com/api.php?id=<span id="id">{//Your User ID}</span></p>
+            <p class="mb-0">https://getintotouch.sh20raj.com/api.php?id=<span id="id">{//Your Telegram User ID}</span></p>
             </div>
 
             <div class="mt-4">
