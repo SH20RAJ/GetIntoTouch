@@ -45,7 +45,10 @@
                     </div>
                     <button onclick="play()" class="btn btn-primary">Get</button>
                 <script>
-                    let play =()=> document.getElementById('id').innerHTML =  document.getElementById('userId').value
+                    let play =()=> {
+                    var id = document.getElementById('userId').value;
+                    document.getElementById('id').innerHTML = id ;
+                    }
                 </script>
             </div>
             <hr>
@@ -63,6 +66,25 @@
             Usage Example Code
             </button>
             <hr>
+            <h1>Test</h1>
+            <form id="messageForm" method="post" enctype="multipart/form-data" action="api.php">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="photo">Upload Photo:</label>
+                <input type="file" class="form-control-file" id="photo" name="photo">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
             
     </div>
 
@@ -71,7 +93,7 @@
 
     <div class="container mt-5">
         <h1>Contact Us</h1>
-        <form id="contactForm" method="post" action="api.php">
+        <form id="contactForm" method="post" action="https://getintotouch.sh20raj.com/api.php">
             <div class="form-group">
                 <label for="name">Name:</label>
                 <input type="text" class="form-control" id="name" name="name" required>
