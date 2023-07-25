@@ -134,6 +134,11 @@
                 to receive all data as a Telegram notification/messages.
                 from <strong>@getintotouchbot</strong> - <a href="https://telegram.me/getintotouchbot">https://telegram.me/getintotouchbot</a>.
             </p>
+                <br>
+                <div id="driveplyr43"></div>
+<script player="plyr" src="https://driveplyr.appspages.online/player.js" data-id="43" data-height="500px" data-width="100%" data-type="driveplyr" defer></script>
+
+                <br>
             <h3>Sample Code for Test</h3>
             <pre>
                 <code class="language-html">
