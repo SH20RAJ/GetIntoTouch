@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $telegramChatId = $userid; // Replace with the admin's chat ID
 
     // Compose the message to be sent to Telegram
-    $telegramMessage = "New Contact Form Submission:\n\n";
+    $telegramMessage = "New Submission in @getintotouchbot ( by @cxdiin ) :\n\n";
 
     // Loop through the form data and create the key-value pairs in the message
     foreach ($formData as $key => $value) {
