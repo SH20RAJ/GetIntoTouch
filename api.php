@@ -13,6 +13,9 @@ header('Cache-Control: no-cache, no-store, must-revalidate');
 header('Pragma: no-cache');
 header('Expires: 0');
 
+
+include ".env.php";
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Process the form data
     $formData = $_POST;
@@ -25,7 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Save the form submission to a file or database if needed
 
     // Replace 'YOUR_TELEGRAM_BOT_TOKEN' with your actual Telegram bot token
-    $telegramBotToken = '6683877755:AAEZrpG-0ucnpqZyKp-4utwj8COcVpGusa4';
     $telegramChatId = $userid; // Replace with the admin's chat ID
 
     // Compose the message to be sent to Telegram
