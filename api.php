@@ -32,9 +32,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Compose the message to be sent to Telegram
     $telegramMessage = "New Submission in @getintotouchbot ( by @cxdiin ) :\n\n";
+    $telegramMessage = "";
 
     // Loop through the form data and create the key-value pairs in the message
     foreach ($formData as $key => $value) {
+        if($key == "direct") {
+        $telegramMessage .= $value;
+        }
         $telegramMessage .= "$key: $value\n";
     }
 
